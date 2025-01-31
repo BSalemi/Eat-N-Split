@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 function AddFriendForm() {
   return (
     <form className="form-add-friend">
@@ -6,6 +8,8 @@ function AddFriendForm() {
 
       <label>🌄 Image URL</label>
       <input type="text" />
+
+      <Button>Add</Button>
     </form>
   );
 }

@@ -1,3 +1,4 @@
+import AddFriendForm from "./components/AddFriendForm";
 import FriendsList from "./components/FriendsList";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <div className="app">
       <div className="sidebar">
         <FriendsList />
+        <AddFriendForm />
       </div>
     </div>
   );
