@@ -1,8 +1,8 @@
 import Button from "./Button";
 
-function AddFriendForm({ isFormOpen }) {
+function AddFriendForm({ showAddFriend }) {
   return (
-    isFormOpen && (
+    showAddFriend && (
       <form className="form-add-friend">
         <label>👫 Friend name</label>
         <input type="text" />

@@ -6,19 +6,19 @@ import FriendsList from "./components/FriendsList";
 import SplitBillForm from "./components/SplitBillForm";
 
 function App() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [showAddFriend, setShowAddFriend] = useState(false);
 
-  function handleSetIsFormOpen() {
-    setIsFormOpen(!isFormOpen);
+  function handleSetShowAddFriend() {
+    setShowAddFriend(!showAddFriend);
   }
 
   return (
     <div className="app">
       <div className="sidebar">
         <FriendsList />
-        <AddFriendForm isFormOpen={isFormOpen} />
-        <Button onClickFunction={handleSetIsFormOpen}>
-          {isFormOpen ? "Close" : "Add friend"}
+        <AddFriendForm showAddFriend={showAddFriend} />
+        <Button onClickFunction={handleSetShowAddFriend}>
+          {showAddFriend ? "Close" : "Add friend"}
         </Button>
       </div>
       <SplitBillForm />
