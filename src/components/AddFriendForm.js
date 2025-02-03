@@ -3,11 +3,24 @@ import Button from "./Button";
 
 function AddFriendForm({ showAddFriend, handleSetFriendsList }) {
   const [name, setName] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("https://i.pravatar.cc/48");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const id = crypto.randomUUID();
+
+    const newFriend = {
+      id,
+      name,
+      image: `${image}?=${id}`,
+      balance: 0,
+    };
+  }
 
   return (
     showAddFriend && (
-      <form className="form-add-friend">
+      <form className="form-add-friend" onSubmit={(e) => handleSubmit(e)}>
         <label>👫 Friend name</label>
         <input
           type="text"
