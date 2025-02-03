@@ -1,10 +1,10 @@
 import Friend from "./Friend";
 
-function FriendsList({ friendsList }) {
+function FriendsList({ friends }) {
   return (
-    friendsList && (
+    friends && (
       <ul>
-        {friendsList.map((friend) => (
+        {friends.map((friend) => (
           <Friend friend={friend} key={friend.id} />
         ))}
       </ul>

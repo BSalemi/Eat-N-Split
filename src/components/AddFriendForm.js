@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Button from "./Button";
 
-function AddFriendForm({ showAddFriend, handleSetFriendsList }) {
+function AddFriendForm({ showAddFriend, handleAddFriend }) {
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/48");
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (!name || !image) return;
 
     const id = crypto.randomUUID();
 
@@ -16,6 +18,10 @@ function AddFriendForm({ showAddFriend, handleSetFriendsList }) {
       image: `${image}?=${id}`,
       balance: 0,
     };
+    handleAddFriend(newFriend);
+
+    setName("");
+    setImage("https://i.pravatar.cc/48");
   }
 
   return (
