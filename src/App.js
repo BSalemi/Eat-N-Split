@@ -28,6 +28,7 @@ const initialFriends = [
 
 function App() {
   const [showAddFriend, setShowAddFriend] = useState(false);
+  const [showSplitBill, setShowSplitBill] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
 
   function handleSetShowAddFriend() {
@@ -36,6 +37,7 @@ function App() {
 
   function handleAddFriend(friend) {
     setFriends((freinds) => [...friends, friend]);
+    setShowAddFriend(false);
   }
 
   return (
@@ -44,7 +46,7 @@ function App() {
         <FriendsList friends={friends} />
         <AddFriendForm
           showAddFriend={showAddFriend}
-          handleAddFriend={handleAddFriend}
+          onAddFriend={handleAddFriend}
         />
         <Button onClickFunction={handleSetShowAddFriend}>
           {showAddFriend ? "Close" : "Add friend"}
