@@ -48,10 +48,12 @@ function App() {
     <div className="app">
       <div className="sidebar">
         <FriendsList friends={friends} onSelection={handleSelection} />
+
         <AddFriendForm
           showAddFriend={showAddFriend}
           onAddFriend={handleAddFriend}
         />
+
         <Button onClickFunction={handleSetShowAddFriend}>
           {showAddFriend ? "Close" : "Add friend"}
         </Button>
