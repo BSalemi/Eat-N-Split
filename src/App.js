@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import AddFriendForm from "./components/AddFriendForm";
 import Button from "./components/Button";
 import FriendsList from "./components/FriendsList";
@@ -48,12 +47,10 @@ function App() {
     <div className="app">
       <div className="sidebar">
         <FriendsList friends={friends} onSelection={handleSelection} />
-
         <AddFriendForm
           showAddFriend={showAddFriend}
           onAddFriend={handleAddFriend}
         />
-
         <Button onClickFunction={handleSetShowAddFriend}>
           {showAddFriend ? "Close" : "Add friend"}
         </Button>

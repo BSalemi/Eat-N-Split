@@ -1,4 +1,5 @@
 import Button from "./Button";
+
 function Friend({ friend, onSelection }) {
   return (
     <li>
@@ -17,14 +18,7 @@ function Friend({ friend, onSelection }) {
       )}
       {friend.balance === 0 && <p>You and {friend.name} are even</p>}
 
-      <Button
-        onClick={() => {
-          console.log("Button clicked", friend);
-          onSelection(friend);
-        }}
-      >
-        Select
-      </Button>
+      <Button onClickFunction={() => onSelection(friend)}>Select</Button>
     </li>
   );
 }
