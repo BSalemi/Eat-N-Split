@@ -46,7 +46,11 @@ function App() {
   return (
     <div className="app">
       <div className="sidebar">
-        <FriendsList friends={friends} onSelection={handleSelection} />
+        <FriendsList
+          friends={friends}
+          onSelection={handleSelection}
+          selectedFriend={selectedFriend}
+        />
         <AddFriendForm
           showAddFriend={showAddFriend}
           onAddFriend={handleAddFriend}
