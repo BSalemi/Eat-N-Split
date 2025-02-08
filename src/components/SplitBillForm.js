@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SplitBillForm({ selectedFriend }) {
+function SplitBillForm({ selectedFriend, onSplitBill }) {
   const [bill, setBill] = useState("");
   const [paidByUser, setPaidByUser] = useState("");
   const paidByFriend = bill ? bill - paidByUser : "";
@@ -10,6 +10,7 @@ function SplitBillForm({ selectedFriend }) {
     e.preventDefault();
 
     if (!bill || !paidByUser) return;
+    onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
   }
 
   return (
@@ -42,7 +43,7 @@ function SplitBillForm({ selectedFriend }) {
         onChange={(e) => setWhoIsPaying(e.target.value)}
       >
         <option value="user">You</option>
-        <option value="you"> {selectedFriend.name} </option>
+        <option value="friend"> {selectedFriend.name} </option>
       </select>
     </form>
   );
