@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Eat-n-Split
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Eat-n-Split is a simple React application that helps you manage and split bills among friends. You can add friends, select a friend, and split the bill with them, updating their balance accordingly.
 
-## Available Scripts
+![alt text](image.png)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Add new friends with a name and image.
+- Select a friend to split the bill with.
+- Update the balance of the selected friend based on the bill split.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: A JavaScript library for building user interfaces.
+- **useState Hook**: To manage the state of the application, including friends list, selected friend, and visibility of the add friend form.
+- **Component-based Architecture**: The application is divided into reusable components such as `AddFriendForm`, `Button`, `FriendsList`, and `SplitBillForm`.
 
-### `npm test`
+## Components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **App**: The main component that holds the state and renders other components.
+- **AddFriendForm**: A form to add a new friend.
+- **Button**: A reusable button component.
+- **FriendsList**: A list of friends that allows selection.
+- **SplitBillForm**: A form to split the bill with the selected friend.
 
-### `npm run build`
+## How to Run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Start the development server using `npm start`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Skills Demonstrated
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **State Management**: Using the `useState` hook to manage the state of friends, selected friend, and form visibility.
+- **Conditional Rendering**: Rendering components conditionally based on the state.
+- **Event Handling**: Handling events such as form submission and button clicks.
+- **Component Communication**: Passing data and functions between parent and child components via props.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get started with the project, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/eat-n-split.git
+   ```
