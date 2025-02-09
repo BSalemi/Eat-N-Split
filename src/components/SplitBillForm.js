@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 function SplitBillForm({ selectedFriend, onSplitBill }) {
   const [bill, setBill] = useState("");
@@ -45,6 +46,8 @@ function SplitBillForm({ selectedFriend, onSplitBill }) {
         <option value="user">You</option>
         <option value="friend"> {selectedFriend.name} </option>
       </select>
+
+      <Button>Split Bill</Button>
     </form>
   );
 }
