@@ -46,3 +46,17 @@ To get started with the project, follow these steps:
    ```bash
    git clone https://github.com/your-username/eat-n-split.git
    ```
+2. Navigate to the project directory:
+   `cd eat-n-split`
+
+3. Install the dependencies:
+   `npm install`
+
+4. Start the development server:
+   `npm start`
+
+This application will be available at `http://localhost:3000`.
+
+## License
+
+This project is licensed under the MIT License.
